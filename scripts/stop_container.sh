@@ -2,6 +2,6 @@
 set -e
 
 # Stop the running container (if any)
-containerid=`docker ps | awk -F" " '${print$1}'`
+containerid=`docker ps | awk -F" " '{print$1}'`
 docker stop $containerid
 docker rm $containerid
